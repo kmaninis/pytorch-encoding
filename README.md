@@ -1,3 +1,14 @@
+# Install PyTorch version below
+```
+git clone https://github.com/pytorch/pytorch.git
+git reset --hard 13de6e8
+export TORCH_CUDA_ARCH_LIST="3.5;5.0+PTX;6.0;6.1;7.0"
+cd pytorch
+python setup.py install
+cd ..
+'''
+
+
 # PyTorch-Encoding
 
 created by [Hang Zhang](http://hangzh.com/)
