@@ -6,7 +6,7 @@ export TORCH_CUDA_ARCH_LIST="3.5;5.0+PTX;6.0;6.1;7.0"
 cd pytorch
 python setup.py install
 cd ..
-'''
+```
 
 
 # PyTorch-Encoding
