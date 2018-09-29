@@ -14,6 +14,12 @@ export TORCH_CUDA_ARCH_LIST="3.5;5.0+PTX;6.0;6.1;7.0"
 # Install pytorch
 python setup.py install
 cd ..
+
+# Get ninja
+wget https://github.com/ninja-build/ninja/releases/download/v1.8.2/ninja-linux.zip
+unzip ninja-linux.zip
+mv ninja /conda/env/path/bin
+
 ```
 
 
