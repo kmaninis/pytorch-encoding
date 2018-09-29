@@ -1,7 +1,7 @@
 # Install PyTorch version below
 ```
 # Clone the repo
-git clone https://github.com/pytorch/pytorch.git
+git clone --recursive https://github.com/pytorch/pytorch.git
 cd pytorch
 
 # Revert to specific commit
@@ -20,6 +20,18 @@ wget https://github.com/ninja-build/ninja/releases/download/v1.8.2/ninja-linux.z
 unzip ninja-linux.zip
 mv ninja /conda/env/path/bin
 
+# Install additional dependencies
+conda install requests future
+git clone https://github.com/pytorch/vision.git
+cd vision
+python setup.py install
+cd ..
+
+# Install pytorch encoding
+git clone git@github.com:kmaninis/pytorch-encoding.git
+cd pytorch-encoding
+python setup.py install
+cd ..
 ```
 
 
