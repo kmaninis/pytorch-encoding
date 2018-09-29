@@ -1,9 +1,17 @@
 # Install PyTorch version below
 ```
+# Clone the repo
 git clone https://github.com/pytorch/pytorch.git
-git reset --hard 13de6e8
-export TORCH_CUDA_ARCH_LIST="3.5;5.0+PTX;6.0;6.1;7.0"
 cd pytorch
+
+# Revert to specific commit
+git reset --hard 13de6e8
+git submodule update --init
+
+# Only for Volta GPUs
+export TORCH_CUDA_ARCH_LIST="3.5;5.0+PTX;6.0;6.1;7.0"
+
+# Install pytorch
 python setup.py install
 cd ..
 ```
