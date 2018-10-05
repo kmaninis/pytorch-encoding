@@ -3,6 +3,9 @@
 # Clone the repo
 git clone --recursive https://github.com/pytorch/pytorch.git
 cd pytorch
+conda install numpy pyyaml mkl mkl-include setuptools cmake cffi typing
+conda install -c mingfeima mkldnn
+conda install -c pytorch magma-cuda90
 
 # Revert to specific commit
 git reset --hard 13de6e8
@@ -32,6 +35,9 @@ git clone git@github.com:kmaninis/pytorch-encoding.git
 cd pytorch-encoding
 python setup.py install
 cd ..
+
+conda install scikit-learn scikit-image
+pip install tensorboard tensorboardx tensorflow graphviz
 ```
 
 
